@@ -1,0 +1,105 @@
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background: var(--bg-primary);
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 20;
+  height: 80px;
+  width: 100%;
+}
+
+.navbar .nav-menu {
+  display: flex;
+  align-items: center;
+  background: var(--bg-primary);
+}
+
+.navbar .nav-link {
+  font-weight: var(--weight-bold);
+  margin: 0 1rem;
+  font-size: 0.8rem;
+}
+
+.navbar #logo img {
+  display: block;
+  width: 40px;
+}
+
+.navbar .btn {
+  margin-right: 1.5rem;
+}
+
+.fas.fa-arrow-right {
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* hamburger */
+.hamburger {
+  margin-bottom: 0.1rem;
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 23px;
+  height: 3px;
+  margin: 4px auto;
+  transition: all 0.3s ease-in-out;
+  border-radius: 30px;
+  background-color: var(--bg-secondary);
+}
+
+/* Theme switch */
+.theme-switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;          /* fixed width so it never moves */
+}
+
+.theme-switch input {
+  display: none;        /* hide the checkbox */
+}
+
+.toggle-icons {
+  position: relative;
+  width: 22px;
+  height: 22px;
+}
+
+/* Both icons are stacked in the exact same spot */
+.toggle-icons img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Default: show sun, hide moon */
+.toggle-icons .sun {
+  opacity: 1;
+}
+
+.toggle-icons .moon {
+  opacity: 0;
+}
+
+#switch:checked + .toggle-icons .sun {
+  opacity: 0;
+}
+
+#switch:checked + .toggle-icons .moon {
+  opacity: 1;
+}
