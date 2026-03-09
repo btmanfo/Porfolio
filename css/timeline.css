@@ -130,3 +130,14 @@
   line-height: 1.5;
   color: var(--text-color);
 }
+
+/* New simple experience list styles */
+.experience-list {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+.experience-item {
+  margin-bottom: 2rem;
+}
