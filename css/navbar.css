@@ -1,105 +1,91 @@
-/* Navbar */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+.site-header {
+  position: relative;
   z-index: 20;
-  background: var(--bg-primary);
 }
 
-.navbar .container {
+.navbar {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 30;
+  padding: 2rem 0 0;
+}
+
+.nav-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 20;
-  height: 80px;
-  width: 100%;
+  gap: 1.5rem;
 }
 
-.navbar .nav-menu {
+.brand {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.16rem;
+  text-transform: uppercase;
+}
+
+.nav-menu-wrap {
   display: flex;
   align-items: center;
-  background: var(--bg-primary);
 }
 
-.navbar .nav-link {
-  font-weight: var(--weight-bold);
-  margin: 0 1rem;
-  font-size: 0.8rem;
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
 }
 
-.navbar #logo img {
-  display: block;
-  width: 40px;
+.nav-link,
+.nav-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.88rem;
+  letter-spacing: 0.06rem;
+  padding: 0.45rem 0.85rem;
+  position: relative;
 }
 
-.navbar .btn {
-  margin-right: 1.5rem;
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 0.15rem;
+  height: 1px;
+  background: currentColor;
+  transition: left var(--transition-fast), right var(--transition-fast);
 }
 
-.fas.fa-arrow-right {
-  margin-left: 0.5rem;
-  font-size: 0.9rem;
+.nav-link:hover::after,
+.nav-link:focus-visible::after {
+  left: 0.85rem;
+  right: 0.85rem;
 }
 
-/* hamburger */
+.nav-icon svg {
+  width: 1.3rem;
+  height: 1.3rem;
+  fill: currentColor;
+}
+
 .hamburger {
-  margin-bottom: 0.1rem;
   display: none;
+  z-index: 32;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0.2rem;
 }
 
 .bar {
   display: block;
-  width: 23px;
-  height: 3px;
-  margin: 4px auto;
-  transition: all 0.3s ease-in-out;
-  border-radius: 30px;
-  background-color: var(--bg-secondary);
-}
-
-/* Theme switch */
-.theme-switch {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;          /* fixed width so it never moves */
-}
-
-.theme-switch input {
-  display: none;        /* hide the checkbox */
-}
-
-.toggle-icons {
-  position: relative;
-  width: 22px;
-  height: 22px;
-}
-
-/* Both icons are stacked in the exact same spot */
-.toggle-icons img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 22px;
-  height: 22px;
-  transition: opacity 0.3s ease-in-out;
-}
-
-/* Default: show sun, hide moon */
-.toggle-icons .sun {
-  opacity: 1;
-}
-
-.toggle-icons .moon {
-  opacity: 0;
-}
-
-#switch:checked + .toggle-icons .sun {
-  opacity: 0;
-}
-
-#switch:checked + .toggle-icons .moon {
-  opacity: 1;
+  width: 1.4rem;
+  height: 2px;
+  margin: 0.3rem 0;
+  border-radius: 999px;
+  background: var(--text-color);
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
 }

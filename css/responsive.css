@@ -1,110 +1,97 @@
-/* Responsiveness */
+@media (max-width: 960px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
 
-@media (max-width: 1000px) {
-  .project {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+  .contact-copy {
+    max-width: 42rem;
   }
 }
 
-@media (max-width: 768px) {
-  .timeline::after {
-    left: 31px;
-  }
-
-  .timeline-item {
-    width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
-  }
-
-  .timeline-item::before {
-    left: 60px;
-    border: medium solid var(--card-background);
-    border-width: 10px 10px 10px 0;
-    border-color: transparent var(--card-background) transparent transparent;
-  }
-
-  .left::after, .right::after {
-    left: 21px;
-  }
-
-  .right {
-    left: 0%;
-  }
-}
-
-@media (max-width: 670px) {
-  .navbar .nav-menu {
-    position: fixed;
-    right: -100vw;
-    top: 4.5rem;
-    flex-direction: column;
-    width: calc(80% - 10px);
-    transition: 0.3s;
-    box-shadow: var(--shadow);
-    padding: 2rem;
-    border-radius: 5px;
-    align-items: flex-start;
-  }
-
-  .navbar .btn {
-    margin: 0;
-    margin-top: 1rem;
-  }
-
-  .nav-menu.active {
-    right: 20px;
-  }
-
-  .nav-menu .nav-link {
-    font-weight: var(--weight-bold);
-    font-size: 0.9rem;
-    margin: 0 0.2rem;
-  }
-
-  .nav-menu li {
-    margin-bottom: 0.5rem;
-    width: 100%;
-  }
-
-  .nav-menu .btn {
-    width: 100%;
-    text-align: center;
-    margin-top: 0.5rem;
+@media (max-width: 720px) {
+  .navbar {
+    padding-top: 1.25rem;
   }
 
   .hamburger {
     display: block;
-    cursor: pointer;
-    padding: 0.2rem 0.4rem;
   }
 
-  .hamburger.active {
-    border: 1px dotted gray;
+  .nav-menu-wrap {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(2, 10, 19, 0.98);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition-slow);
+  }
+
+  .nav-menu-wrap.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+
+  .nav-link,
+  .nav-icon {
+    font-size: 1.35rem;
+    letter-spacing: 0.12rem;
+    text-transform: uppercase;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
   }
 
   .hamburger.active .bar:nth-child(2) {
     opacity: 0;
   }
 
-  .hamburger.active .bar:nth-child(1) {
-    transform: translateY(6px) rotate(45deg);
-  }
-
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
-}
 
-@media (max-width: 600px) {
-  .project {
-    display: grid;
-    grid-template-columns: 1fr;
+  .hero-section {
+    padding-top: 6.5rem;
   }
 
-  .header-container .btn {
-    border-radius: 5px;
-    width: 80%;
+  .glitch-title {
+    letter-spacing: 0.18rem;
+  }
+
+  .field-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    width: min(100% - 1.5rem, var(--width-large));
+  }
+
+  .backdrop-word {
+    left: -0.35rem;
+    font-size: 9.3rem;
+  }
+
+  .hero-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .experience-item,
+  .contact-form {
+    padding: 1.35rem;
+  }
+
+  .section {
+    padding: 4.5rem 0;
   }
 }

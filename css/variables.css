@@ -1,26 +1,26 @@
-/* Fonts + CSS variables */
-@import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Space+Grotesk:wght@400;500;700&display=swap");
 
-/* variables */
 :root {
-  /* Colors */
-  --primary-color: #c6ff42;
-  --secondary-color: #c6ff42;
-  --bg-primary: #000000;
-  --text-color: #ffffff;
-  --text-color-two: #222222;
-  --bg-secondary: #ffffff;
-  --card-background: #111111;
-  --bg-secondary-two: #f4f4f4;
-  --shadow: 0 2px 10px rgba(95, 95, 95, 0.2);
-
-  /* Font Weight */
-  --weight-small: 400;
-  --weight-semibold: 600;
-  --weight-bold: 800;
-
-  /* Max width */
-  --width-small: 600px;
-  --width-medium: 1100px;
-  --width-large: 1300px;
+  --bg-primary: #020a13;
+  --bg-panel: rgba(7, 18, 29, 0.84);
+  --bg-panel-strong: #091521;
+  --bg-panel-soft: rgba(19, 40, 62, 0.3);
+  --text-color: #e1e1e1;
+  --text-muted: #c6c6c6;
+  --text-faint: rgba(255, 255, 255, 0.78);
+  --border-color: #14202b;
+  --line-color: rgba(255, 255, 255, 0.07);
+  --mark-color: #080f18;
+  --accent-cyan: #77fff6;
+  --accent-pink: #ff6eb6;
+  --accent-blue: #4ea5ff;
+  --accent-green: #53e78d;
+  --shadow-soft: 0 30px 80px rgba(0, 0, 0, 0.28);
+  --shadow-card: 0 18px 40px rgba(0, 0, 0, 0.24);
+  --font-body: "Space Grotesk", sans-serif;
+  --font-display: "Abril Fatface", serif;
+  --width-large: 1180px;
+  --width-medium: 1080px;
+  --transition-fast: 220ms ease;
+  --transition-slow: 500ms ease;
 }
